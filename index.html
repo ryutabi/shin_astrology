@@ -11,15 +11,15 @@
   <div class="astrology__container">
     <div class="input_birthday__container">
       <div id="inputBirthday"></div>
-      <button id="fortuneButton">
+      <button id="fortuneButton" onclick="getFortune()">
         <i class="fas fa-search"></i>
         占う
       </button>
     </div>
   
-    <div id="birthday">1988. 2. 24</div>
-    <div class="astrology_result">
-      <div class="astrology_result__numberology">7</div>
+    <div id="birthday" class="hidden"></div>
+    <div id="result" class="astrology_result hidden">
+      <div class="astrology_result__numberology" id="soulNumber"></div>
       <div class="astrology_result__syuku">
         <span>27宿</span>
         <div id="syuku27"></div>
@@ -33,5 +33,6 @@
 
   <script src="https://kit.fontawesome.com/f54553110a.js" crossorigin="anonymous"></script>
   <script src="src/index.js"></script>
+  <script src="src/astrology.js"></script>
 </body>
 </html>
