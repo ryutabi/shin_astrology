@@ -20,11 +20,13 @@ select {
   font-size: 2rem;
   width: 10rem;
   height: 4rem;
+  background-color: #fafafa;
 }
 
 span {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: #666;
 }
 
 
@@ -46,6 +48,7 @@ span {
   width: 10rem;
   height: 4rem;
   font-size: 2rem;
+  font-family: 'Noto Serif JP';
   border-radius: .5rem;
   background-color: #839b5c;
   color: #fafafa;
@@ -73,9 +76,10 @@ span {
 .astrology_result__numberology {
   width: 6rem;
   height: 6rem;
-  line-height: 6rem;
+  line-height: 7rem;
   font-family: 'Great Vibes';
   font-size: 5rem;
+  padding-top: 1rem;
 }
 
 .astrology_result__syuku {
