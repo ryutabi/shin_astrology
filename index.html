@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shin Astrology</title>
+  <link rel="stylesheet" href="src/index.css">
+</head>
+<body onload="init()">
+
+  <div class="astrology__container">
+    <div class="input_birthday__container">
+      <div id="inputBirthday"></div>
+      <button id="fortuneButton">
+        <i class="fas fa-search"></i>
+        占う
+      </button>
+    </div>
+  
+    <div id="birthday">1988.2.24</div>
+    <div class="astrology_result">
+      <div class="astrology_result__numberology">7</div>
+      <div class="astrology_result__syuku">
+        <span>27宿</span>
+        <div id="syuku27"></div>
+      </div>
+      <div class="astrology_result__syuku">
+        <span>28宿</span>
+        <div id="syuku28"></div>
+      </div>      
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/f54553110a.js" crossorigin="anonymous"></script>
+  <script src="src/index.js"></script>
+</body>
+</html>
