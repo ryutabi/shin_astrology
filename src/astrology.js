@@ -88,11 +88,13 @@ const getQreki = (y, m, d) => {
 
 
 // 1920/1/1 からの経過日数
-const getElapsedDays = (_y, _m, _d) => {
+const getElapsedDays = (y, m, d) => {
   const startDay = new Date('1920/1/1')
-  const today = new Date(`${_y}/${_m}/${_d}`)
+  const today = new Date(`${y}/${m}/${d}`)
   const msecDiff = today.getTime() - startDay.getTime()
   const dayDiff = Math.floor(msecDiff / 1000 / 60 / 60 / 24)
-  
+
   return dayDiff
 }
+
+module.exports = { numberology, xiuyaojing }
