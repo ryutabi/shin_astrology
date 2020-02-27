@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shin Astrology</title>
   <link rel="stylesheet" href="src/index.css">
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+  }
+  </script>
+  <!-- PWA -->
 </head>
 <body onload="init()">
 
@@ -16,7 +24,7 @@
         占う
       </button>
     </div>
-  
+
     <div id="birthday" class="hidden"></div>
     <div id="result" class="astrology_result hidden">
       <div class="astrology_result__numberology" id="soulNumber"></div>
@@ -27,7 +35,7 @@
       <div class="astrology_result__syuku">
         <span>28宿</span>
         <div id="syuku28"></div>
-      </div>      
+      </div>
     </div>
   </div>
 
