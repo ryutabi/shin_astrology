@@ -57,9 +57,8 @@ const xiuyaojing = async (y, m, d) => {
   ]
 
   const qreki = await getQreki(y, m, d)
-
-  const i = qreki.old_month - 1
-  const j = qreki.old_day - 1
+  const i = qreki.month - 1
+  const j = qreki.day - 1
   const k = getElapsedDays(y, m, d) % 28
 
   return {
@@ -71,21 +70,20 @@ const xiuyaojing = async (y, m, d) => {
 
 // get_qreki.php から旧暦を取得
 const getQreki = (y, m, d) => {
-  const data = {
-    'year': y,
-    'month': m,
-    'day': d
-  }
+  const url = new URL('https://dateinfoapi.appspot.com/v1')
+  const params = `${y}-${m}-${d}`
+  url.searchParams.set('date', params)
 
-  return fetch('src/get_qreki.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
+  return fetch(url.href, {
+    method: 'GET'
   })
   .then(response => response.json())
-  .then(data => data)
+  .then(data => qreki = {
+    date: data.old_date,
+    year: data.old_year,
+    month: data.old_month,
+    day: data.old_day
+  })
 }
 
 
