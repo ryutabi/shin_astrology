@@ -68,7 +68,7 @@ const xiuyaojing = async (y, m, d) => {
 }
 
 
-// API にアクセスして旧暦を取得
+// get_qreki.php から旧暦を取得
 const getQreki = (y, m, d) => {
   const url = new URL('https://dateinfoapi.appspot.com/v1')
   const params = `${y}-${m}-${d}`
