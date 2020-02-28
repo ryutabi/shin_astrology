@@ -6,8 +6,6 @@ const urlsToCache = [
   'src/index.css',
   'src/index.js',
   'src/astrology.js',
-  'src/qreki.php',
-  'src/get_qreki.php',
   'src/icons/icon-192x192.png',
   'src/icons/icon-384x384.png',
   'src/icons/icon-512x512.png'
