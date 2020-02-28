@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shin Astrology</title>
+  <link rel="stylesheet" href="src/index.css">
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="src/icons/icon-192x192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+  <!-- PWA -->
+</head>
+<body onload="init()">
+
+  <div class="astrology__container">
+    <div class="input_birthday__container">
+      <div id="inputBirthday"></div>
+      <button id="fortuneButton" onclick="getFortune()">
+        <i class="fas fa-search"></i>
+        占う
+      </button>
+    </div>
+
+    <div id="birthday" class="hidden"></div>
+    <div id="result" class="astrology_result hidden">
+      <div class="astrology_result__numberology" id="soulNumber"></div>
+      <div class="astrology_result__syuku">
+        <span>27宿</span>
+        <div id="syuku27"></div>
+      </div>
+      <div class="astrology_result__syuku">
+        <span>28宿</span>
+        <div id="syuku28"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/f54553110a.js" crossorigin="anonymous"></script>
+  <script src="src/index.js"></script>
+  <script src="src/astrology.js"></script>
+</body>
+</html>

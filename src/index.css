@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Charmonman&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 50%;
+}
+
+body {
+  font-size: 2rem;
+  background-color: #fafafa;
+  color: #333;
+}
+
+select {
+  margin: 1rem;
+  font-size: 2rem;
+  width: 10rem;
+  height: 4rem;
+  background-color: #fafafa;
+}
+
+span {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+
+.astrology__container {
+  max-width: 40rem;
+  margin: 20rem auto 0;
+  text-align: center;
+}
+
+.input_birthday__container {
+  margin-bottom: 5rem;
+}
+
+#inputBirthday {
+  margin-bottom: 1rem;
+}
+
+#fortuneButton {
+  width: 10rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-family: 'Noto Serif JP';
+  border-radius: .5rem;
+  border: 1px solid #839b5c;
+  background-color: #839b5c;
+  color: #fafafa;
+  transition: .2s;
+}
+
+#fortuneButton:hover {
+  opacity: .8;
+}
+
+#birthday {
+  letter-spacing: .2rem;
+  font-style: italic;
+  width: 20rem;
+  border-bottom: .1rem solid #333;
+  margin: 0 auto 2rem;
+}
+
+.astrology_result {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.astrology_result__numberology {
+  width: 6rem;
+  height: 6rem;
+  line-height: 7rem;
+  font-family: 'Charmonman';
+  font-size: 5rem;
+  padding-top: 1rem;
+}
+
+.astrology_result__syuku {
+  display: flex;
+}
+
+#syuku27, #syuku28 {
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  font-family: 'Noto Serif JP';
+  font-size: 4rem;
+}
+
+.hidden {
+  display: none;
+}
