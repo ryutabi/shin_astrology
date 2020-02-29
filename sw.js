@@ -1,4 +1,4 @@
-const version = '1.0.0'
+const version = '1.1.0'
 const CACHE_NAME = version + '::Astrology'
 const urlsToCache = [
   'manifest.json',
@@ -6,6 +6,9 @@ const urlsToCache = [
   'src/index.css',
   'src/index.js',
   'src/astrology.js',
+  'src/qreki.js',
+  'src/icons/apple-touch-icon-120x120.png',
+  'src/icons/apple-touch-icon-180x180.png',
   'src/icons/icon-192x192.png',
   'src/icons/icon-384x384.png',
   'src/icons/icon-512x512.png'
