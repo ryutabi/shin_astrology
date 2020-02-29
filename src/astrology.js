@@ -56,10 +56,12 @@ const xiuyaojing = async (y, m, d) => {
     "井", "鬼", "柳", "星", "張", "翼", "軫"
   ]
 
-  const qreki = await getQreki(y, m, d)
+  const date = new Date(`${y}/${m}/${d}`)
+  const qreki = await new Qreki(date.getJD())
+
   const i = qreki.month - 1
   const j = qreki.day - 1
-  const k = getElapsedDays(y, m, d) % 28
+  const k = getElapsedDays(date) % 28
 
   return {
     S_27: SYUKUYO_27_LIST[i][j],
@@ -68,30 +70,10 @@ const xiuyaojing = async (y, m, d) => {
 }
 
 
-// get_qreki.php から旧暦を取得
-const getQreki = (y, m, d) => {
-  const url = new URL('https://dateinfoapi.appspot.com/v1')
-  const params = `${y}-${m}-${d}`
-  url.searchParams.set('date', params)
-
-  return fetch(url.href, {
-    method: 'GET'
-  })
-  .then(response => response.json())
-  .then(data => qreki = {
-    date: data.old_date,
-    year: data.old_year,
-    month: data.old_month,
-    day: data.old_day
-  })
-}
-
-
 // 1920/1/1 からの経過日数
-const getElapsedDays = (y, m, d) => {
+const getElapsedDays = date => {
   const startDay = new Date('1920/1/1')
-  const today = new Date(`${y}/${m}/${d}`)
-  const msecDiff = today.getTime() - startDay.getTime()
+  const msecDiff = date.getTime() - startDay.getTime()
   const dayDiff = Math.floor(msecDiff / 1000 / 60 / 60 / 24)
 
   return dayDiff

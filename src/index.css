@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Charmonman&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +27,10 @@ span {
   color: #666;
 }
 
+svg {
+  margin-right: .5rem;
+}
+
 
 .astrology__container {
   max-width: 40rem;
@@ -49,12 +50,16 @@ span {
   width: 10rem;
   height: 4rem;
   font-size: 2rem;
-  font-family: 'Noto Serif JP';
+  font-family: serif;
   border-radius: .5rem;
   border: 1px solid #839b5c;
   background-color: #839b5c;
   color: #fafafa;
   transition: .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 #fortuneButton:hover {
@@ -78,9 +83,10 @@ span {
 .astrology_result__numberology {
   width: 6rem;
   height: 6rem;
-  line-height: 7rem;
-  font-family: 'Charmonman';
-  font-size: 5rem;
+  line-height: 6rem;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 4.5rem;
   padding-top: 1rem;
 }
 
@@ -94,7 +100,7 @@ span {
   width: 6rem;
   height: 6rem;
   line-height: 6rem;
-  font-family: 'Noto Serif JP';
+  font-family: serif;
   font-size: 4rem;
 }
 
