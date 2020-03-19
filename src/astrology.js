@@ -78,6 +78,3 @@ const getElapsedDays = date => {
 
   return dayDiff
 }
-
-
-// module.exports = { numberology, xiuyaojing }
